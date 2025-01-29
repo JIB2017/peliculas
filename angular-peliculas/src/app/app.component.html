@@ -1,7 +1,7 @@
 <h1>Peliculas para descargar</h1>
 
-<h2>Peliculas para niños</h2>
-<app-listado-peliculas></app-listado-peliculas>
+<h2>Peliculas en cartelera</h2>
+<app-listado-peliculas [peliculas]="peliculasEnCartelera" ></app-listado-peliculas>
 
-<h2>Peliculas para toda la familia</h2>
-<app-listado-peliculas></app-listado-peliculas>
+<h2>Peliculas por estrenar</h2>
+<app-listado-peliculas [peliculas]="peliculasProximamente" ></app-listado-peliculas>
