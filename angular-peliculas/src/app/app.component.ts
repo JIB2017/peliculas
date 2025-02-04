@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ListadoPeliculasComponent } from "./peliculas/listado-peliculas/listado-peliculas.component";
+import { MenuComponent } from './compartidos/componentes/menu/menu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ListadoPeliculasComponent],
+  imports: [ListadoPeliculasComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -56,7 +57,7 @@ export class AppComponent implements OnInit{
           imagen: "https://es.web.img3.acsta.net/c_310_420/img/e0/49/e049eaa49afba114edc8f38dc9959e47.jpg",
         },
       ];
-    }, 2500);
+    }, 1000);
   }
   peliculasEnCartelera!: any[];
   peliculasProximamente!: any[];
