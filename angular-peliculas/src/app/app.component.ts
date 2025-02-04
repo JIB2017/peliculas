@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ListadoPeliculasComponent } from "./peliculas/listado-peliculas/listado-peliculas.component";
 import { MenuComponent } from './compartidos/componentes/menu/menu.component';
+import { RatingComponent } from './compartidos/componentes/rating/rating.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ListadoPeliculasComponent, MenuComponent],
+  imports: [ListadoPeliculasComponent, MenuComponent, RatingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -61,4 +62,7 @@ export class AppComponent implements OnInit{
   }
   peliculasEnCartelera!: any[];
   peliculasProximamente!: any[];
+  proccessVote(vote: number) {
+    alert(`It works, the vote is: ${vote}`);
+  }
 }
