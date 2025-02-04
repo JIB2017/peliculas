@@ -1,5 +1,6 @@
 <h1>Peliculas para descargar</h1>
-
+<input type="file" style="display: none;" #upload_file>
+<button (click)="upload_file.click()">Subir</button>
 <h2>Peliculas en cartelera</h2>
 <app-listado-peliculas [peliculas]="peliculasEnCartelera" ></app-listado-peliculas>
 
