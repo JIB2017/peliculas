@@ -7,18 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './listado-peliculas.component.html',
   styleUrl: './listado-peliculas.component.css'
 })
-export class ListadoPeliculasComponent implements OnInit {
-  ngOnInit(): void {
-    
-  }
+export class ListadoPeliculasComponent {
   @Input({required: true})
   peliculas!: any[];
   agregarPelicula() {
     this.peliculas.push({
       nombre: "Toy Story 4",
-        fecha: new Date("2023-11-20"),
-        precio: "1399.99",
-        // imagen: "https://es.web.img3.acsta.net/c_310_420/img/fa/96/fa96c4c78e2d47db7bc917e5d93b9c49.jpg",
+      fecha: new Date("2023-11-20"),
+      precio: "1399.99",
     })
+  }
+  removerPelicula(pelicula: any) {
+    const index = this.peliculas.findIndex((el: any) => el.nombre === pelicula.nombre);
+    this.peliculas.splice(index, 1);
   }
 }
