@@ -12,5 +12,13 @@ export class ListadoPeliculasComponent implements OnInit {
     
   }
   @Input({required: true})
-  peliculas!: any[]
+  peliculas!: any[];
+  agregarPelicula() {
+    this.peliculas.push({
+      nombre: "Toy Story 4",
+        fecha: new Date("2023-11-20"),
+        precio: "1399.99",
+        // imagen: "https://es.web.img3.acsta.net/c_310_420/img/fa/96/fa96c4c78e2d47db7bc917e5d93b9c49.jpg",
+    })
+  }
 }
