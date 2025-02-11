@@ -63,6 +63,5 @@ export class AppComponent implements OnInit{
   peliculasEnCartelera!: any[];
   peliculasProximamente!: any[];
   proccessVote(vote: number) {
-    alert(`It works, the vote is: ${vote}`);
   }
 }
